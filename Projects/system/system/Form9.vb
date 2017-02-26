@@ -8,7 +8,10 @@ Public Class Form9
         Dim Username As String = TextBox3.Text
         Dim pass As String = TextBox4.Text
         Dim confirm As String = TextBox5.Text
-        If pass <> confirm Then
+
+        If ((TextBox1.Text = "") Or (TextBox2.Text = "") Or (TextBox3.Text = "") Or (TextBox4.Text = "") Or (TextBox5.Text = "")) Then
+            MessageBox.Show("All fields are required to fill!")
+        ElseIf pass <> confirm Then
             MessageBox.Show("Password doesn't match")
         Else
             Dim connectionString As String = _
@@ -20,7 +23,7 @@ Public Class Form9
                     cmd.Connection = con
                     cmd.CommandText = _
                         "Create TABLE " + Username + "ElectricBill (ID COUNTER, FirstName TEXT, LastName TEXT, ServiceIDNumber TEXT, Rate TEXT, ContractName TEXT, ServiceAddress TEXT, BillDate TEXT, MeterReadingDate TEXT, BillPeriod TEXT, DueDate TEXT, TotalKWH TEXT, TotalCurrentAmount TEXT, Generation TEXT, Transmission TEXT, SystemLoss TEXT, Distribution TEXT, Subsidies TEXT, GovernmentTaxes TEXT, UniversalCharges TEXT, FitAll TEXT, OtherCharges TEXT )"
-                   
+
                     Try
                         cmd.ExecuteNonQuery()
 
@@ -63,14 +66,13 @@ Public Class Form9
                 con.Close()
 
             End Using
-
+            Me.Hide()
+            Form1.Show()
         End If
-        Me.Hide()
-        Form1.Show()
-        
     End Sub
 
-    Private Sub Form9_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Me.Hide()
+        Form1.Show()
     End Sub
 End Class

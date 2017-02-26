@@ -35,6 +35,7 @@ Partial Class Form1
         '
         Me.login.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.login.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.login.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.login.Location = New System.Drawing.Point(243, 306)
         Me.login.Name = "login"
         Me.login.Size = New System.Drawing.Size(143, 26)
@@ -47,6 +48,7 @@ Partial Class Form1
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Button1.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Location = New System.Drawing.Point(243, 348)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(143, 26)
@@ -103,6 +105,7 @@ Partial Class Form1
         '
         'Form1
         '
+        Me.AcceptButton = Me.login
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
@@ -118,10 +121,11 @@ Partial Class Form1
         Me.Controls.Add(Me.Label2)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(5)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

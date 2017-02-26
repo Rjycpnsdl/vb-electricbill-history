@@ -16,11 +16,6 @@ Public Class Form2
         Form3.Show()
     End Sub
 
-    Private Sub Form2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
-
-
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Me.Hide()
@@ -103,5 +98,10 @@ Public Class Form2
     Private Sub Button4_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Hide()
         Jan.Show()
+    End Sub
+
+    Private Sub Button4_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        Me.Hide()
+        Form1.Show()
     End Sub
 End Class

@@ -150,11 +150,14 @@ Public Class Form1
            
 
             Form2.Show()
+            username.Clear()
+            password.Clear()
 
             'End If
 
         Else
             MsgBox("Sorry, username or password not found", MsgBoxStyle.OkOnly, "Invalid Login")
+            password.Text = ""
         End If
 
 
@@ -174,7 +177,4 @@ Public Class Form1
         Form9.Show()
     End Sub
 
-    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
